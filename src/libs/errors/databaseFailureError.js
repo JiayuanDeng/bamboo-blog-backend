@@ -1,0 +1,4 @@
+module.exports = {
+  status: 500,
+  message: 'Internal Server Error'
+};
