@@ -14,6 +14,7 @@ router.post('/login', userController.login);
 router.get('/account', expressJwt, userController.account);
 
 router.post('/articles', expressJwt, articleController.createArticle);
+router.get('/articles/:articleId', expressJwt, articleController.getArticle);
 
 /*
 router.get('/articles', expressJwt, usersController.article);
