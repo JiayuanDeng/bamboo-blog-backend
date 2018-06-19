@@ -1,7 +1,7 @@
 var jwt = require("jsonwebtoken");
 var config = require('../config/config');
 
-module.exports = {
+var jwtLib = {
   sign: (username) => {
     var token = jwt.sign(
       {
@@ -16,15 +16,17 @@ module.exports = {
     console.log('Signed token of ' + JSON.stringify(jwt.decode(token, {json: true})));
     return token;
   },
-  getRes: (username) => {
-    var accessToken = jwtLib.sign(username);
+  getRes: (email) => {
+    var accessToken = jwtLib.sign(email);
     var decodedAccessToken = jwt.decode(accessToken, {json: true});
     return {
       credential: {
         access_token: accessToken,
-        username: decodedAccessToken.username,
+        email: decodedAccessToken.email,
         expire: decodedAccessToken.exp
       }
     }
   }
 };
+
+module.exports = jwtLib;

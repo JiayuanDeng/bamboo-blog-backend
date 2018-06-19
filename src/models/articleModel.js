@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var articleSchema = new mongoose.Schema({
+  id:Number,
   title: {
     type: String,
     required: true,
@@ -10,13 +11,14 @@ var articleSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  id:Number,
-  viewCount:Number,
-  commentCount:Number,
-  time:String,
-  coverImg:String,
   author:String,
   tags:Array,
+  coverImg:String,
+  viewCount:Number,
+  commentCount:Number,
+  createTime:String,
+  updateTime:String,
+  creator:String,
   isPublish:Boolean
 });
 

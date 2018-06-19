@@ -6,11 +6,19 @@ module.exports = {
   getArticles: (searchCondition) => {
 
   },
-  createArticle: (email, password) => {
-
+  createArticle: (articleData) => {
+    var currentTime = Date.now();
+    articleData = {
+      ...articleData,
+      viewCount: 0,
+      commentCount: 0,
+      createTime: currentTime,
+      updateTime: currentTime
+    };
+    return articleModel.create(articleData);
   },
-  getArticle: (id) => {
-
+  getArticle: (articleId) => {
+    return articleModel.findById(articleId).exec();
   },
   updateArticle: () => {
 

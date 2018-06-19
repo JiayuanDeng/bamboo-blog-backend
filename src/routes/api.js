@@ -5,12 +5,15 @@ var expressJwt = require('express-jwt')(config.jwt);
 
 
 /* Controllers */
-var usersController = require('../controllers/userController');
+var userController = require('../controllers/userController');
+var articleController = require('../controllers/articleController');
 
 /* Routes */
-router.post('/register', usersController.register);
-router.post('/login', usersController.login);
-router.get('/account', expressJwt, usersController.account);
+router.post('/register', userController.register);
+router.post('/login', userController.login);
+router.get('/account', expressJwt, userController.account);
+
+router.post('/articles', expressJwt, articleController.createArticle);
 
 /*
 router.get('/articles', expressJwt, usersController.article);
