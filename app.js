@@ -28,19 +28,19 @@ app.use(function(req, res, next) {
 
 // Errors
 app.use(function(err, req, res, next) {
-  switch (err.status) {
-    case 401:
-      console.log(err.status + ' Unauthorized: ' + err.message);
-      res.status(err.status).json({
-        message: 'Unauthorized'
-      });
-      break;
-    default:
-      console.log(err.status + ' ' + err.message);
-      res.status(err.status).json({
-        message: err.message
-      });
-  }
+    switch (err.status) {
+        case 401:
+            console.log(err.status + ' Unauthorized: ' + err.message);
+            res.status(err.status).json({
+                message: 'Unauthorized'
+            });
+            break;
+        default:
+            console.log(err.status + ' ' + err.message);
+            res.status(err.status).json({
+                message: err.message
+            });
+    }
 });
 
 module.exports = app;

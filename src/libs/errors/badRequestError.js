@@ -1,4 +1,4 @@
 module.exports = {
-  status: 400,
-  message: 'Bad Request'
+    status: 400,
+    message: 'Bad Request'
 };

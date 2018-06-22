@@ -3,19 +3,19 @@ var errorLib = require('../libs/errorLib');
 
 
 module.exports = {
-  getAlltags: () => {
+    getAlltags: () => {
 
-  },
-  createTag: (name, description) => {
+    },
+    createTag: (name, description) => {
 
-  },
-  getTag: (name) => {
+    },
+    getTag: (name) => {
 
-  },
-  updateTag: (name, description) => {
+    },
+    updateTag: (name, description) => {
 
-  },
-  deleteTag: (name) => {
+    },
+    deleteTag: (name) => {
 
-  }
+    }
 };

@@ -18,7 +18,6 @@ router.get('/articles/:articleId', expressJwt, articleController.getArticle);
 
 /*
 router.get('/articles', expressJwt, usersController.article);
-router.get('/articles/:articleId', expressJwt, usersController.article);
 router.get('/tags', expressJwt, usersController.account);
 */
 
